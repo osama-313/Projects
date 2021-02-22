@@ -9,4 +9,14 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>Helloworld</display-name>
+    <servlet-name>Helloworld</servlet-name>
+    <servlet-class>com.p1.controller.Helloworld</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Helloworld</servlet-name>
+    <url-pattern>/Helloworld</url-pattern>
+  </servlet-mapping>
 </web-app>
