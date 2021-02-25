@@ -1,14 +1,40 @@
 package com.p1.modles;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+@Entity
+
+@Table(name = "User_table")
 public class User {
+	@Id
+	@Column(name = "card_id")
+	@GeneratedValue(generator = "user_id_seq", strategy = GenerationType.AUTO)
+	@SequenceGenerator(allocationSize = 1, name = "user_id_seq", sequenceName = "user_id_seq")
 	private int userId;
+	@Column
 	private String username;
+	@Column
 	private String password;
+	@Column
 	private String firstname;
+	@Column
 	private String lastname;
+	@Column
 	private String email;
-	private Role role;
 	
+	@JoinColumn
+	@ManyToOne
+	private Role role;
+
+
 	
 	public User() {
 		super();

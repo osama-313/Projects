@@ -79,7 +79,7 @@ public class P1RepositoryImpl implements P1Repository {
 		return c;
 	}
 
-	public void insert(User c) {
+	public void insert(Object c) {
 		// All of our work is done within the context of a Hibernate session
 		Session s = null;
 		/*

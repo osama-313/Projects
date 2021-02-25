@@ -1,10 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Hello World !!</title>
-</head>
-<body>
-	<h1>Welcome </h1>
-</body>
+        <title >Welcome</title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="./stylesheet.css"></link>
+    </head>
+        <!--body is what the client can see a UI-->
+    <body style="background-color: rgb(41, 1, 23);">
+        <!--we use divs to divide the page to diffrent sections-->
+        <div class="container">
+            <div id="message">
+                <h1>Required Expense Reimbursement System.</h1>
+                <h2>Project 1</h2>
+            </div>
+            <div id ="formDiv">
+                <form id="form">
+                    <input type = "email" placeholder="Email" required/>
+                    <input type = "password" placeholder="password" required/>
+                    <button>Login</button>
+                </form>
+            </div>
+        </div>
+        <!--we can user the style tag to apply styles. it's better than inline css.-->
+        <style>
+            h1{
+                color:darkseagreen;
+            }
+            h2{
+                color:rgb(243, 3, 3);
+            }
+        </style>
+        <!--we are refrencing an external JS file at the bottom of this document.-->
+        <script src="./revbook.js"></script>
+    </body>
 </html>

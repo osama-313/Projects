@@ -47,10 +47,10 @@
 		
 		validate: Hibernate will validate a pre-existing schema. This means that it will make sure
 		that your Java models are mapped in a way that is consistent with the existing schema.-->
-		<property name="hibernate.hbm2ddl.auto">validate</property>
+		<property name="hibernate.hbm2ddl.auto">create</property>
 		<!-- We need to tell Hibernate where the mapped resources are; it doesn't
 		auto detect the resources. -->
-		<mapping class="com.p1.models.User"/>
-		<mapping class="com.p1.models.Role"/>
+		<mapping class="com.p1.modles.User"/>
+		<mapping class="com.p1.modles.Role"/>
 	</session-factory>
 </hibernate-configuration>

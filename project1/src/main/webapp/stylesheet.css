@@ -1,0 +1,47 @@
+@charset "ISO-8859-1";
+input, button{
+     /*
+     *px,em, or %?
+     *px is a static measurement \. it doesn't change based on the elements relative to it.
+
+     * em and % are relative measurement.
+     *em specifies that an element's size.
+     */
+     border-radius: 0.5em;
+     width: 20em;
+     height: 3em;
+ }
+ button{
+     background-color: rgb(70, 187, 41);
+ }
+ /*
+  * .class name to selct an element by its class name. 
+  */
+ .container{
+    display: flex;
+    flex-direction: row;
+    column-gap: 7em;
+    margin-left: 12em;
+    margin-top: 13em;
+ }
+ /*
+  *#idname used to select elements by its name
+  */
+  #formDiv
+  {
+      text-align: center;
+  }
+  #form{
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5em;
+    border-style: groove;
+    border-width: 0.5px;
+    padding: 3em;
+    background-color: white;
+  }
+  #message{
+      width: 30em;
+      height: 10em;
+      text-align: center;
+  }

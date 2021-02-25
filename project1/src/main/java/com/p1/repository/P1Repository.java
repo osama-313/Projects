@@ -7,7 +7,7 @@ public interface P1Repository {
 	List<User> findAll();
 	User findByName(String name);
 	User findById(int id);
-	void insert(User c);
+	void insert(Object c);
 	void update(User c);
 	void delete(User c);
 
