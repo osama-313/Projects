@@ -15,7 +15,12 @@ public class Driver {
 		User user = new User(1, "osama313","12345","Osama","nagi","osama@gmail.com",role);
 		service.insert(role);
 		service.insert(user);
-		//cardService.update(card1);
+
+		System.out.println(service.findByEmail("osama@gmail.com"));		
+		//System.out.println(service.findByName("Osama"));
+		//System.out.println(service.findAll());
+		//System.out.println(service.findById(1));
+
 
 	}
 }

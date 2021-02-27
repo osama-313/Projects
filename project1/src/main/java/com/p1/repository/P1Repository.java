@@ -6,6 +6,7 @@ import com.p1.modles.*;
 public interface P1Repository {
 	List<User> findAll();
 	User findByName(String name);
+	User findByEmail(String email);
 	User findById(int id);
 	void insert(Object c);
 	void update(User c);

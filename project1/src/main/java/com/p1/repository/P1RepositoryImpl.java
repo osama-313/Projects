@@ -26,7 +26,7 @@ public class P1RepositoryImpl implements P1Repository {
 			 * HQL allows us to emphasize our Java models rather than the entities in the
 			 * DB. It provides a more object-oriented approach to data persistence.
 			 */
-			users = s.createQuery("FROM Card", User.class).getResultList();
+			users = s.createQuery("FROM User", User.class).getResultList();
 			tx.commit();
 		} catch (HibernateException e) {
 			e.printStackTrace();
@@ -47,7 +47,10 @@ public class P1RepositoryImpl implements P1Repository {
 		try {
 			s = HibernateSessionFactory.getSession();
 			tx = s.beginTransaction();
-			c = s.get(User.class, name );
+			c =  (User) s.createQuery("from User u where u.firstname = :firstname")
+					.setParameter("firstname", name)
+					.getSingleResult();
+			
 			tx.commit();
 		} catch (HibernateException e) {
 			e.printStackTrace();
@@ -75,7 +78,6 @@ public class P1RepositoryImpl implements P1Repository {
 		} finally {
 			s.close();
 		}
-
 		return c;
 	}
 
@@ -140,4 +142,28 @@ public class P1RepositoryImpl implements P1Repository {
 
 	}
 
+	@Override
+	public User findByEmail(String email) {
+		User c = null;
+		Session s = null;
+		Transaction tx = null;
+
+		try {
+			s = HibernateSessionFactory.getSession();
+			tx = s.beginTransaction();
+			c =  (User) s.createQuery("from User u where u.email = :email")
+					.setParameter("email", email)
+					.getSingleResult();
+			
+			tx.commit();
+		} catch (HibernateException e) {
+			e.printStackTrace();
+			tx.rollback();
+		} finally {
+			s.close();
+		}
+
+		return c;
+
+	}
 }

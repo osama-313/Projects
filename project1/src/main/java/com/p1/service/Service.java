@@ -32,5 +32,15 @@ private P1Repository repo;
 	public void update(User c) {
 		this.repo.update(c);
 	}
+	
+	public User findByName(String name) {
+		return this.repo.findByName(name);
+	}
+	
+	public User findByEmail(String email) {
+		return this.repo.findByEmail(email);
+
+	}
+
 
 }

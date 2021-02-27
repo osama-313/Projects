@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title >Welcome</title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="./stylesheet.css"></link>
+    </head>
+        <!--body is what the client can see a UI-->
+    <body style="background-color: rgb(250, 246, 248);">
+        <!--we use divs to divide the page to diffrent sections-->
+        <div class="container">
+            <div id="message">
+                <h1>Welcome employee</h1>
+                <h2>Please selcet an action from the following</h2>
+            </div>
+            <div id ="formDiv">
+                <form id="form" method="post" action="Employeepage">
+                    <button type = "submit" name = "button" value = "button1">submit a reimbursement request</button>
+                    <button type="submit" name="button" value="button2">view your pending reimbursement requests</button>
+                    <button type="submit" name="button" value="button3">view your resolved reimbursement requests</button>
+                    <button type="submit" name="button" value="button4">view your resolved reimbursement requests</button>
+                    <button type="submit" name="button" value="button5">view your information</button>
+                    <button type="submit" name="button" value="button6">update your information</button>
+                    <button type="submit" name="button" value="button7">Logout</button>
+                </form>
+            </div>
+        </div>
+        <!--we can user the style tag to apply styles. it's better than inline css.-->
+        <style>
+            h1{
+                color:rgb(0, 2, 0);
+            }
+            h2{
+                text-align: center;
+                color:rgb(243, 3, 3);
+            }
+            #formDiv {
+                text-align: center;
+                position: relative;
+                text-align: center;
+            }
+        </style>
+    </body>
+</html>

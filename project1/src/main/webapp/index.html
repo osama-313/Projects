@@ -7,16 +7,15 @@
     </head>
         <!--body is what the client can see a UI-->
     <body style="background-color: rgb(41, 1, 23);">
-        <!--we use divs to divide the page to diffrent sections-->
         <div class="container">
             <div id="message">
                 <h1>Required Expense Reimbursement System.</h1>
                 <h2>Project 1</h2>
             </div>
             <div id ="formDiv">
-                <form id="form">
-                    <input type = "email" placeholder="Email" required/>
-                    <input type = "password" placeholder="password" required/>
+                <form id="form" method="post" action="login">
+                    <input type = "email" placeholder="Email" required name = "useremail"/>
+                    <input type = "password" placeholder="password" required name = "password"/>
                     <button>Login</button>
                 </form>
             </div>
