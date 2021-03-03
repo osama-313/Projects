@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title >Welcome</title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="./stylesheet.css"></link>
+    </head>
+    <body style="background-color: rgb(250, 246, 248);">
+        <div class="container">
+            <div id="message">
+                <h2>Please fill out the form</h2>
+            </div>
+            <div id ="formDiv">
+                <form id="form" method="post" action="ReimbursementReq">
+                    Enter your Id number <input name = "employeeId"/>
+                    Enter the Amount <input name = "amount"/>
+                    Enter the Date <input name = "date"/>
+                    <button>Submit</button>
+                </form>
+            </div>
+        </div>
+        <style>
+            h1{
+                color:rgb(0, 2, 0);
+            }
+            h2{
+                text-align: center;
+                color:rgb(243, 3, 3);
+            }
+            #formDiv {
+                text-align: center;
+                position: relative;
+                text-align: center;
+            }
+        </style>
+    </body>
+</html>

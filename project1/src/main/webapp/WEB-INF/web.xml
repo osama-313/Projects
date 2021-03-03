@@ -39,4 +39,34 @@
     <servlet-name>Employeepage</servlet-name>
     <url-pattern>/Employeepage</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ReimbursementReq</display-name>
+    <servlet-name>ReimbursementReq</servlet-name>
+    <servlet-class>com.p1.controller.ReimbursementReq</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReimbursementReq</servlet-name>
+    <url-pattern>/ReimbursementReq</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Pendingreq</display-name>
+    <servlet-name>Pendingreq</servlet-name>
+    <servlet-class>com.p1.controller.Pendingreq</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Pendingreq</servlet-name>
+    <url-pattern>/Pendingreq</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Employeeinfo</display-name>
+    <servlet-name>Employeeinfo</servlet-name>
+    <servlet-class>com.p1.controller.Employeeinfo</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Employeeinfo</servlet-name>
+    <url-pattern>/Employeeinfo</url-pattern>
+  </servlet-mapping>
 </web-app>

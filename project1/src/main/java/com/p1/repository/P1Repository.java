@@ -11,5 +11,6 @@ public interface P1Repository {
 	void insert(Object c);
 	void update(User c);
 	void delete(User c);
-
+	List<Reimbursement> findPending();
+	List<User> finduser(int id);
 }

@@ -7,6 +7,7 @@ import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+import com.p1.modles.Reimbursement;
 import com.p1.modles.User;
 import com.p1.util.HibernateSessionFactory;
 
@@ -165,5 +166,49 @@ public class P1RepositoryImpl implements P1Repository {
 
 		return c;
 
+	}
+
+	@Override
+	public List<Reimbursement> findPending() {
+		List<Reimbursement> req = new ArrayList<>();
+
+		Session s = null;
+		Transaction tx = null;
+
+		try {
+			s = HibernateSessionFactory.getSession();
+			tx = s.beginTransaction();
+			req = (List<Reimbursement>) s.createQuery("from Reimbursement u where u.Status =:status", Reimbursement.class)
+					.setParameter("status", "pending").getResultList();
+			tx.commit();
+		} catch (HibernateException e) {
+			e.printStackTrace();
+			tx.rollback();
+		} finally {
+			s.close();
+		}
+		return req;
+	}
+
+	@Override
+	public List<User> finduser(int id) {
+		List<User> user = new ArrayList<>();
+
+		Session s = null;
+		Transaction tx = null;
+
+		try {
+			s = HibernateSessionFactory.getSession();
+			tx = s.beginTransaction();
+			user = (List<User>) s.createQuery("from User u where u.userId =:card_id", User.class)
+					.setParameter("card_id", id).getResultList();
+			tx.commit();
+		} catch (HibernateException e) {
+			e.printStackTrace();
+			tx.rollback();
+		} finally {
+			s.close();
+		}
+		return user;
 	}
 }

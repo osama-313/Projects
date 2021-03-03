@@ -6,16 +6,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class Helloworld
- */
-public class Helloworld extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.p1.service.Service;
 
+/**
+ * Servlet implementation class Pendingreq
+ */
+public class Pendingreq extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
     /**
-     * Default constructor. 
+     * @see HttpServlet#HttpServlet()
      */
-    public Helloworld() {
+    public Pendingreq() {
+        super();
         // TODO Auto-generated constructor stub
     }
 
@@ -23,9 +27,11 @@ public class Helloworld extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at:  ").append(request.getContextPath());
-		response.getWriter().write("Wassgooood");
+		response.setContentType("application/json");
+		Service ser = new Service();
+		ObjectMapper objetMapper= new ObjectMapper();
+		String jsonString = objetMapper.writeValueAsString(ser.findPending());
+		response.getWriter().write(jsonString);
 	}
 
 	/**

@@ -2,6 +2,7 @@ package com.p1.service;
 
 import java.util.List;
 
+import com.p1.modles.Reimbursement;
 import com.p1.modles.User;
 import com.p1.repository.P1Repository;
 import com.p1.repository.P1RepositoryImpl;
@@ -41,6 +42,12 @@ private P1Repository repo;
 		return this.repo.findByEmail(email);
 
 	}
+	public List<Reimbursement> findPending() {
+		return this.repo.findPending();
+	}
+	public List<User> finduser(int id) {
+		return this.repo.finduser(id);
 
+	}
 
 }

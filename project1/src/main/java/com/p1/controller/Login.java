@@ -39,6 +39,7 @@ public class Login extends HttpServlet {
 				response.getWriter().write("Welcome " + user.getFirstname() + " you're now loged in");
 				HttpSession session = request.getSession(); // this create a session.
 				session.setAttribute("username", user.getUsername());
+				session.setAttribute("userid", user.getUserId());
 				response.sendRedirect("http://localhost:8088/project1/EmployeePage.html");
 			} else {
 				response.getWriter().write("your username or password are not correct ");

@@ -41,13 +41,15 @@ public class Employeepage extends HttpServlet {
 		String button = request.getParameter("button");
 
 		if ("button1".equals(button)) {
-			response.getWriter().write("Served at:1 ");
+			response.sendRedirect("http://localhost:8088/project1/reimbursementform.html");
 		} else if ("button2".equals(button)) {
-			response.getWriter().append("Served at: 2");
+			response.sendRedirect("http://localhost:8088/project1/requests.html");
 		} else if ("button3".equals(button)) {
 			response.getWriter().append("Served at:3 ");
-		} else {
+		} else if ("button4".equals(button)) {
 			// ???
+		}else if ("button5".equals(button)) {
+			response.sendRedirect("http://localhost:8088/project1/userinfo.html");
 		}
 	}
 

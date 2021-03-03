@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title >Welcome</title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="./stylesheet.css"></link>
+    </head>
+    <body style="background-color: rgb(250, 246, 248);">
+        <div class="container">
+            <div id="message">
+                <h1>pending requests</h1>
+            </div>
+            <div id ="formDiv">
+                <form id="form" method="get" action="Pendingreq">
+                    <div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>reimbursementId|</td>
+                                    <td>employeeId|</td>
+                                    <td>amount|</td>
+                                    <td>date|</td>
+                                    <td>status|</td>
+                                </tr>
+                            </thead>
+                            <tbody id="info">
+                            </tbody>
+                        </table>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script>
+            function getJokesAsynchronously(){
+                //This is the endpoint we're using to access the resource we want to grab async
+                let url = 'Pendingreq'
+
+                //If we want to use AJAX, we'll need to use an XMLHttpRequest.
+                let xhr = new XMLHttpRequest() //ready state is 0
+
+                //I know that I want my jokes to be placed in the table's body, so I'll select the table's body right now. This is just simple DOM manipulation.
+                let tbody = document.getElementById('info')
+                xhr.onreadystatechange = function(){
+                    if(xhr.readyState === 4 && xhr.status === 200){
+                        let req = JSON.parse(xhr.responseText)
+                        console.log(req);
+
+                        for (let j of req){
+                            //Let's create the new elements which should be appended to the table
+                            let tr = document.createElement('tr')
+                            let id = document.createElement('td')
+                            let emid = document.createElement('td')
+                            let amount = document.createElement('td')
+                            let date = document.createElement('td')
+                            let status = document.createElement('td')
+
+                            //Let's fill out our td elements with the data which belongs inside of them
+                            id.innerHTML = j.reimbursementId
+                            emid.innerHTML = j.employeeId
+                            amount.innerHTML = j.amount
+                            date.innerHTML = j.date
+                            status.innerHTML = j.status
+
+                            //Now let's piece all of our elements together:
+                            tr.append(id)
+                            tr.append(emid)
+                            tr.append(amount)
+                            tr.append(date)
+                            tr.append(status)
+                            tbody.append(tr)
+                        }
+                    }
+                }
+
+                xhr.open('GET', url) //ready state is 1
+                xhr.send() //ready state is 2
+            }
+            window.onload = function(){
+                getJokesAsynchronously()
+            }
+        </script>
+    </body>
+</html>
