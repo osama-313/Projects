@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title >Welcome</title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="./stylesheet.css"></link>
+    </head>
+    <body style="background-color: rgb(250, 246, 248);">
+        <div class="container">
+            <div id="message">
+                <h1>Approve/Deny requests, please fill out the form</h1>    
+            </div>
+            <div id ="formDiv">
+                <form id="form" method="get" action="Approvingreq">
+
+                    <div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>reimbursementId|</td>
+                                    <td>employeeId|</td>
+                                    <td>amount|</td>
+                                    <td>date|</td>
+                                    <td>status|</td>
+                                </tr>
+                            </thead>
+                            <tbody id="info">
+                            </tbody>
+                        </table>
+                        
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script>
+            function getJokesAsynchronously(){
+                let url = 'Approvingreq'
+
+                let xhr = new XMLHttpRequest() //ready state is 0
+
+                let tbody = document.getElementById('info')
+                xhr.onreadystatechange = function(){
+                    if(xhr.readyState === 4 && xhr.status === 200){
+                        let req = JSON.parse(xhr.responseText)
+                        console.log(req);
+
+                        for (let j of req){
+                            let tr = document.createElement('tr')
+                            let id = document.createElement('td')
+                            let emid = document.createElement('td')
+                            let amount = document.createElement('td')
+                            let date = document.createElement('td')
+                            let status = document.createElement('td')
+                            let submit = document.createElement('button')
+
+
+                            id.innerHTML = j.reimbursementId
+                            emid.innerHTML = j.employeeId
+                            amount.innerHTML = j.amount
+                            date.innerHTML = j.date
+                            status.innerHTML = j.status
+                            submit.innerHTML = "Approve"
+                            
+                            tr.append(id)
+                            tr.append(emid)
+                            tr.append(amount)
+                            tr.append(date)
+                            tr.append(status)
+                            tr.append(submit)
+                            tbody.append(tr)
+                        }
+                    }
+                }
+
+                xhr.open('GET', url) //ready state is 1
+                xhr.send() //ready state is 2
+            }
+            window.onload = function(){
+                getJokesAsynchronously()
+            }
+        </script>
+    </body>
+</html>

@@ -9,7 +9,7 @@ public interface P1Repository {
 	User findByEmail(String email);
 	User findById(int id);
 	void insert(Object c);
-	void update(User c);
+	void update(Object c);
 	void delete(User c);
 	List<Reimbursement> findPending();
 	List<User> finduser(int id);

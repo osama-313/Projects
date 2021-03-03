@@ -30,7 +30,7 @@ private P1Repository repo;
 		return this.repo.findById(id);
 	}
 	
-	public void update(User c) {
+	public void update(Object c) {
 		this.repo.update(c);
 	}
 	

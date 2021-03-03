@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title >Welcome</title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="./stylesheet.css"></link>
+    </head>
+        <!--body is what the client can see a UI-->
+    <body style="background-color: rgb(255, 255, 255);">
+        <div class="container">
+            <div id="message">
+                <h1>Update Your Information</h1>
+            </div>
+            <div id ="formDiv">
+            <form id="form" method="post" action="updateuser">
+           		   New First Name<input required  name = "firstname"/>
+                   New Last Name <input  required name = "lastname"/>
+                   New Username <input  required name = "username"/>
+                   New Email<input type = "email" placeholder="Email" required name = "useremail"/>
+                   New Password <input type = "password" placeholder="password" required name = "password"/>
+                    
+                    
+                    
+                    <button>Login</button>
+                </form>
+            </div>
+        </div>
+        <!--we can user the style tag to apply styles. it's better than inline css.-->
+        <style>
+            h1{
+                color:red;
+            }
+            h2{
+                color:rgb(243, 3, 3);
+            }
+        </style>
+        <!--we are refrencing an external JS file at the bottom of this document.-->
+        <script src="./revbook.js"></script>
+    </body>
+</html>

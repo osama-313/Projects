@@ -36,8 +36,7 @@ public class Employeepage extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
-		
+
 		String button = request.getParameter("button");
 
 		if ("button1".equals(button)) {
@@ -45,12 +44,16 @@ public class Employeepage extends HttpServlet {
 		} else if ("button2".equals(button)) {
 			response.sendRedirect("http://localhost:8088/project1/requests.html");
 		} else if ("button3".equals(button)) {
-			response.getWriter().append("Served at:3 ");
+			response.getWriter().append("Function not supported yet ");
 		} else if ("button4".equals(button)) {
 			// ???
-		}else if ("button5".equals(button)) {
+		} else if ("button5".equals(button)) {
 			response.sendRedirect("http://localhost:8088/project1/userinfo.html");
+		} else if ("button6".equals(button)) {
+			response.sendRedirect("http://localhost:8088/project1/updateinfo.html");
+		} else if ("button7".equals(button)) {
+			response.sendRedirect("http://localhost:8088/project1/");
 		}
-	}
 
+	}
 }

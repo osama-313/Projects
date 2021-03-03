@@ -69,4 +69,54 @@
     <servlet-name>Employeeinfo</servlet-name>
     <url-pattern>/Employeeinfo</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>updateuser</display-name>
+    <servlet-name>updateuser</servlet-name>
+    <servlet-class>com.p1.controller.updateuser</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>updateuser</servlet-name>
+    <url-pattern>/updateuser</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Mangerpage</display-name>
+    <servlet-name>Mangerpage</servlet-name>
+    <servlet-class>com.p1.controller2.Mangerpage</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Mangerpage</servlet-name>
+    <url-pattern>/Mangerpage</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Approvingreq</display-name>
+    <servlet-name>Approvingreq</servlet-name>
+    <servlet-class>com.p1.controller2.Approvingreq</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Approvingreq</servlet-name>
+    <url-pattern>/Approvingreq</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>logout</display-name>
+    <servlet-name>logout</servlet-name>
+    <servlet-class>com.p1.controller.logout</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>logout</servlet-name>
+    <url-pattern>/logout</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>updateingreq</display-name>
+    <servlet-name>updateingreq</servlet-name>
+    <servlet-class>com.p1.controller2.updateingreq</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>updateingreq</servlet-name>
+    <url-pattern>/updateingreq</url-pattern>
+  </servlet-mapping>
 </web-app>
