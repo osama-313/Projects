@@ -39,9 +39,9 @@ public class Mangerpage extends HttpServlet {
 		} else if ("button2".equals(button)) {
 			response.sendRedirect("http://localhost:8088/project1/requests.html");
 		} else if ("button3".equals(button)) {
-			response.getWriter().append("Served at:3 ");
+			response.getWriter().append("Function is not suppored yet");
 		} else if ("button4".equals(button)) {
-			// ???
+			response.getWriter().append("Function is not suppored yet");
 		}else if ("button5".equals(button)) {
 			response.sendRedirect("http://localhost:8088/project1/userinfo.html");
 		}else if ("button6".equals(button)) {

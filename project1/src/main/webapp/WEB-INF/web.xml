@@ -119,4 +119,14 @@
     <servlet-name>updateingreq</servlet-name>
     <url-pattern>/updateingreq</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>approvedreqests</display-name>
+    <servlet-name>approvedreqests</servlet-name>
+    <servlet-class>com.p1.controller.approvedreqests</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>approvedreqests</servlet-name>
+    <url-pattern>/approvedreqests</url-pattern>
+  </servlet-mapping>
 </web-app>

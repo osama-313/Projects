@@ -13,4 +13,5 @@ public interface P1Repository {
 	void delete(User c);
 	List<Reimbursement> findPending();
 	List<User> finduser(int id);
+	List<Reimbursement> findapproved();
 }

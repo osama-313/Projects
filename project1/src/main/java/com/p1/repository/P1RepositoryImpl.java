@@ -202,4 +202,26 @@ public class P1RepositoryImpl implements P1Repository {
 		}
 		return user;
 	}
+
+	@Override
+	public List<Reimbursement> findapproved() {
+		List<Reimbursement> req = new ArrayList<>();
+
+		Session s = null;
+		Transaction tx = null;
+
+		try {
+			s = HibernateSessionFactory.getSession();
+			tx = s.beginTransaction();
+			req = (List<Reimbursement>) s.createQuery("from Reimbursement u where u.Status =:status", Reimbursement.class)
+					.setParameter("status","Approved").getResultList();
+			tx.commit();
+		} catch (HibernateException e) {
+			e.printStackTrace();
+			tx.rollback();
+		} finally {
+			s.close();
+		}
+		return req;
+	}
 }

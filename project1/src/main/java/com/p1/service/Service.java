@@ -49,5 +49,8 @@ private P1Repository repo;
 		return this.repo.finduser(id);
 
 	}
+	public List<Reimbursement> findapproved() {
+		return this.repo.findapproved();
+	}
 
 }

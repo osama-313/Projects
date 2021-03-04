@@ -1,4 +1,4 @@
-package com.p1.controller2;
+package com.p1.controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -7,20 +7,18 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.p1.controller.ReimbursementReq;
-import com.p1.modles.Reimbursement;
 import com.p1.service.Service;
 
 /**
- * Servlet implementation class Approvingreq
+ * Servlet implementation class approvedreqests
  */
-public class Approvingreq extends HttpServlet {
+public class approvedreqests extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Approvingreq() {
+    public approvedreqests() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -32,21 +30,16 @@ public class Approvingreq extends HttpServlet {
 		response.setContentType("application/json");
 		Service ser = new Service();
 		ObjectMapper objetMapper= new ObjectMapper();
-		String jsonString = objetMapper.writeValueAsString(ser.findPending());
+		String jsonString = objetMapper.writeValueAsString(ser.findapproved());
 		response.getWriter().write(jsonString);
-	
-		
-
-		Reimbursement req = new Reimbursement(2,1,1200,"2/3/2021","Approved");
-		ser.update(req);
-	
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		// TODO Auto-generated method stub
+		doGet(request, response);
 	}
 
 }

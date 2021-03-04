@@ -44,7 +44,7 @@ public class Employeepage extends HttpServlet {
 		} else if ("button2".equals(button)) {
 			response.sendRedirect("http://localhost:8088/project1/requests.html");
 		} else if ("button3".equals(button)) {
-			response.getWriter().append("Function not supported yet ");
+			response.sendRedirect("http://localhost:8088/project1/approvelist.html");
 		} else if ("button4".equals(button)) {
 			// ???
 		} else if ("button5".equals(button)) {
