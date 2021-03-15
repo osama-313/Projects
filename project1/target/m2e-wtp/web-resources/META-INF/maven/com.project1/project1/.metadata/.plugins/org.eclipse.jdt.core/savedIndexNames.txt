@@ -1,0 +1,2 @@
+INDEX VERSION 1.131+/Users/osamanagi/Projects/project1/target/m2e-wtp/web-resources/META-INF/maven/com.project1/project1/.metadata/.plugins/org.eclipse.jdt.core
+438441389.index
