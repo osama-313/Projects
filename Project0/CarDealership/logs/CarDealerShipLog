@@ -1,0 +1,20 @@
+2021-02-09 20:19:48,175 INFO c.C.S.Services [main] A User Signed up
+2021-02-09 20:42:51,997 INFO c.C.S.Services [main] A User Signed up
+2021-02-09 20:45:15,495 INFO c.C.S.Services [main] A User Signed up
+2021-02-10 00:35:22,984 INFO c.C.S.Services [main] A User Signed up
+2021-02-10 00:39:37,874 INFO c.C.S.Services [main] A User Signed up
+2021-02-10 00:47:37,402 INFO c.C.S.Services [main] A Car is Waiting to be approved
+2021-02-10 01:01:45,236 INFO c.C.S.Services [main] A Car is Waiting to be approved
+2021-02-10 01:07:33,281 INFO c.C.S.Services [main] A Car is Waiting to be approved
+2021-02-10 01:11:45,999 INFO c.C.S.Services [main] A Car is Waiting to be approved
+2021-02-10 01:18:16,563 INFO c.C.S.Services [main] A Car is Waiting to be approved
+2021-02-10 01:21:16,057 INFO c.C.S.Services [main] A Car is Waiting to be approved
+2021-02-10 01:32:03,816 INFO c.C.S.Services [main] A Customer Made a payment
+2021-02-10 01:34:38,622 INFO c.C.S.Services [main] A User Signed up
+2021-02-10 01:35:35,884 INFO c.C.S.Services [main] A User Signed up
+2021-02-10 01:37:17,902 INFO c.C.S.Services [main] An employee removed a car from the lot
+2021-02-10 01:38:05,309 INFO c.C.S.Services [main] An employee removed a car from the lot
+2021-02-10 11:35:46,784 INFO c.C.S.Services [main] A User Signed up
+2021-02-10 11:36:34,147 INFO c.C.S.Services [main] A User Signed up
+2021-02-10 11:38:28,438 INFO c.C.S.Services [main] A Car is Waiting to be approved
+2021-02-10 11:41:27,202 INFO c.C.S.Services [main] A Customer Made a payment
